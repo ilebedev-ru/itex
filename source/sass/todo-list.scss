@@ -1,0 +1,49 @@
+.todo-list {
+  width: 100%;
+  padding-top: 40px;
+  background-color: $background-color1;
+}
+
+.todo-list__wrapper {
+  @include desktop-container;
+}
+
+.todo-list__title {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.todo-list__input {
+  width: 526px;
+  padding: 10px 20px;
+  margin-right: 20px;
+  border: 1px solid #535353;
+  border-radius: 4px;
+  box-shadow: inset 3px 3px 7px 0px rgba(0,0,0,0.35);
+}
+
+.todo-list__button {
+  margin: 0;
+  margin-right: 20px;
+  margin-bottom: 60px;
+  padding: 0;
+  width: 18px;
+  height: 14px;
+
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/todo__ok.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+
+  &--del {
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/todo__del.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

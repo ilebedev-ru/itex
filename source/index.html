@@ -45,6 +45,11 @@
               <p class="main-slider__text main-slider__text--big">руб./сутки</p>
             </li>
           </ul>
+          <div class="main-slider__pagination">
+            <button class="main-slider__icon main-slider__icon--active"><span class="visually-hidden">Первый слайд</span></button>
+            <button class="main-slider__icon"><span class="visually-hidden">Второй слайд</span></button>
+            <button class="main-slider__icon"><span class="visually-hidden">Третий слайд</span></button>
+          </div>
           <div class="main-slider__arrows-area">
             <button class="main-slider__arrow main-slider__arrow--left">
               <span class="visually-hidden">Переключить влево</span>
@@ -65,38 +70,38 @@
             Название товара
           </div>
           <article class="product-card">
-            <img src="img/jcb-4cx-super.jpg" alt="JCB 4CX Super">
+            <div class="product-card__image">
+              <img src="img/jcb-4cx-super.jpg" alt="JCB 4CX Super">
+            </div>
             <div class="product-card__desc">
               <h3 class="product-card__name">JCB 4CX Super</h3>
-              <p class="product-card__title">Характеристики</p>
-              <form action="#" method="post">
-                <ul class="product-card__list">
-                  <li class="product-card__item">
-                    <input type="checkbox" name="level-1" id="level-1">
-                    <span class="product-card__checkbox-indicator"></span>
-                    <label for="level-1">Характеристика 1</label>
-                  </li>
-                  <li class="product-card__item">
-                    <input type="checkbox" name="level-2" id="level-2">
-                    <span class="product-card__checkbox-indicator"></span>
-                    <label for="level-2">Характеристика 2</label>
-                  </li>
-                  <li class="product-card__item">
-                    <input type="checkbox" name="level-3" id="level-3">
-                    <span class="product-card__checkbox-indicator"></span>
-                    <label for="level-3">Характеристика 3</label>
-                  </li>
-                </ul>
-                <p class="product-card__title">Информация</p>
-                <p class="product-card__text">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolores labore minima aperiam culpa sapiente fugiat impedit nesciunt voluptatibus explicabo cumque, voluptatem illum non, facere laboriosam dolore iure itaque veritatis.
-                </p>
-                <p class="product-card__price">
-                  <span class="product-card__price-number">125.000</span>
-                  <span class="product-card__price-text">р.</span>
-                </p>
-                <button class="product-card__button" type="submit">Заказать</button>
+              <button class="product-card__title">Характеристики</button>
+              <form class="product-card__form product-card__form--active" action="#" method="post">
+                <label class="product-card__item" for="level-1">
+                  <input class="visually-hidden" type="checkbox" name="level-1" id="level-1" value="5000" checked>
+                  <span class="product-card__checkbox-indicator"></span>
+                  Характеристика 1
+                </label>
+                <label class="product-card__item" for="level-2">
+                  <input class="visually-hidden" type="checkbox" name="level-2" id="level-2" value="7000">
+                  <span class="product-card__checkbox-indicator"></span>
+                  Характеристика 2
+                </label>
+                <label class="product-card__item" for="level-3">
+                  <input class="visually-hidden" type="checkbox" name="level-3" id="level-3" value="2000">
+                  <span class="product-card__checkbox-indicator"></span>
+                  Характеристика 3
+                </label>
               </form>
+              <button class="product-card__title">Информация</button>
+              <p class="product-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates dolores labore minima aperiam culpa sapiente fugiat impedit nesciunt voluptatibus explicabo cumque, voluptatem illum non, facere laboriosam dolore iure itaque veritatis.
+              </p>
+              <p class="product-card__price">
+                <span class="product-card__price-number">125.000</span>
+                <span class="product-card__price-text">р.</span>
+                <button class="product-card__button" type="submit">Заказать</button>
+              </p>
             </div>
           </article>
         </div>
@@ -127,13 +132,18 @@
       </section>
 
       <section class="todo-list">
-        <h2 class="todo-list__title">Заголовок</h2>
-        <input type="text">
+        <div class="todo-list__wrapper">
+          <h2 class="todo-list__title">Заголовок</h2>
+          <input type="text" name="todo" class="todo-list__input">
+          <button type="button" class="todo-list__button"><span class="visually-hidden">Отправить</span></button>
+          <button type="button" class="todo-list__button todo-list__button--del"><span class="visually-hidden">Стереть</span></button>
+        </div>
       </section>
 
       <section class="map">
         <h2 class="visually-hidden">Карта, как нас найти</h2>
-        iframe
+        <img class="map__img" src="img/map.jpg" alt="Карта, как нас найти">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3538.8946962736863!2d60.61007405240691!3d56.85292117761762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1523554663491" width="100%" height="436" style="border:0" allowfullscreen></iframe>
       </section>
     </main>
     <footer class="footer">
@@ -143,25 +153,22 @@
         </div>
         <nav class="footer__nav">
           <ul class="footer__nav-list">
-            <li class="footer__nav-item footer__nav-item--active">Главная</li>
-            <li class="footer__nav-item">Каталог техники</li>
-            <li class="footer__nav-item">Услуги</li>
-            <li class="footer__nav-item">Выполненные работы</li>
-            <li class="footer__nav-item">О компании</li>
-            <li class="footer__nav-item">Контакты</li>
+            <li class="footer__nav-item footer__nav-item--active"><a class="footer__link">Главная</li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Каталог техники</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Услуги</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Выполненные работы</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">О компании</a></li>
+            <li class="footer__nav-item"><a class="footer__link" href="#">Контакты</a></li>
           </ul>
         </nav>
         <div class="footer__copyright">
-          <p class="footer__text">
-            © Aйтекс start 2016
-          </p>
-          <a href="http://itexstart.ru">
-            <img src="itex.png" alt="Логотип компании Айтекс">
-            itexstart.ru
-          </a>
+          <p class="footer__text">© Aйтекс start 2016</p>
+          <img src="img/itex-logo.png" alt="Логотип компании Айтекс">
+          <a class="footer__link footer__link--copyright" href="http://itexstart.ru">itexstart.ru</a>
         </div>
       </div>
     </footer>
+    <script src="js/jquery-3.3.1.min.js"></script>
    	<script src="js/script.js"></script>
   </body>
 </html>

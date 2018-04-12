@@ -1,6 +1,6 @@
 .main-header {
   width: 100%;
-  background-color: $backgroung-color2;
+  background-color: $background-color2;
 }
 
 .main-header__upline {
@@ -14,7 +14,7 @@
 .main-header__logo {
   height: 57px;
   display: block;
-  padding: 10px 20px;
+  padding: 15px 30px;
   margin-right: 17px;
 
   font-family: $font-family3;
@@ -47,13 +47,13 @@
 
 .main-header__menu {
   width: 100%;
-  background-color: $backgroung-color1;
+  background-color: $background-color1;
 }
 
 .main-header__list {
   @include desktop-container;
   padding: 0;
-  padding-left: 60px;
+  padding-left: 65px;
   display: flex;
   list-style: none;
 
@@ -64,7 +64,7 @@
 }
 
 .main-header__item {
-  padding: 18px 20px;
+  padding: 14px 20px;
 }
 
 .main-header__link {

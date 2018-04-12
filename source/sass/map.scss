@@ -1,0 +1,12 @@
+.map {
+  width: 100%;
+  height: 436px;
+  position: relative;
+  background-color: $background-color1;
+}
+
+.map__img {
+  position: absolute;
+  z-index: -1;
+  max-height: 436px;
+}

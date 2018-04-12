@@ -1,0 +1,21 @@
+.catalog {
+  width: 100%;
+  background-color: $background-color1;
+}
+
+.catalog__wrapper {
+  @include desktop-container;
+  padding-top: 40px;
+}
+
+.catalog__breadcrumbs {
+  margin-bottom: 65px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.catalog__link {
+  color: $text-color4;
+  font-size: 12px;
+  line-height: 1.2;
+}
