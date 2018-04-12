@@ -1,4 +1,80 @@
 .main-header {
   width: 100%;
+  background-color: $backgroung-color2;
+}
+
+.main-header__upline {
+  @include desktop-container;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main-header__logo {
+  height: 57px;
+  display: block;
+  padding: 10px 20px;
+  margin-right: 17px;
+
+  font-family: $font-family3;
+  font-size: 27.1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+
+  background-image: url(../img/main-header__logo-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.main-header__desc {
+  max-width: 200px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.main-header__contacts {
+  margin-left: auto;
+}
+
+.main-header__text {
+  margin: 0;
+  padding: 0;
+
+  text-align: right;
+  line-height: 1.2;
+}
+
+.main-header__menu {
+  width: 100%;
   background-color: $backgroung-color1;
+}
+
+.main-header__list {
+  @include desktop-container;
+  padding: 0;
+  padding-left: 60px;
+  display: flex;
+  list-style: none;
+
+  background-image: url(../img/main-header-menu__before.png);
+  background-repeat: no-repeat;
+  background-size: 40px;
+  background-position-y: 50%;
+}
+
+.main-header__item {
+  padding: 18px 20px;
+}
+
+.main-header__link {
+  color: $text-color2;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $text-color1;
+  }
 }

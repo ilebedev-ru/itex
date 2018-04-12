@@ -3,8 +3,10 @@
   <head>
     <meta charset="utf-8">
     <title>Аренда - услуги строительной техники</title>
- <!--    <link rel="preload" href="fonts/Georgia.woff" as="font" type="font/woff" crossorigin>
-    <link rel="preload" href="fonts/Georgia-Bold.woff" as="font" type="font/woff" crossorigin> -->
+    <link rel="preload" href="fonts/PTSans-Bold.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/PTSans-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/MyriadPro-Regular.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="fonts/impact.woff" as="font" type="font/woff" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -23,32 +25,33 @@
       </div>
       <nav class="main-header__menu">
         <ul class="main-header__list">
-          <li class="main-header__item">Каталог техники</li>
-          <li class="main-header__item">Услуги</li>
-          <li class="main-header__item">Выполненные работы</li>
-          <li class="main-header__item">О компании</li>
-          <li class="main-header__item">Контакты</li>
+          <li class="main-header__item"><a class="main-header__link" href="#">Каталог техники</a></li>
+          <li class="main-header__item"><a class="main-header__link" href="#">Услуги</a></li>
+          <li class="main-header__item"><a class="main-header__link" href="#">Выполненные работы</a></li>
+          <li class="main-header__item"><a class="main-header__link" href="#">О компании</a></li>
+          <li class="main-header__item"><a class="main-header__link" href="#">Контакты</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <section class="main-slider">
         <h2 class="visually-hidden">Основные услуги</h2>
-        <div class="container">
+        <div class="main-slider__wrapper">
           <ul class="main-slider__list">
-            <li class="main-slider__item ">
+            <li class="main-slider__item">
+              <img src="img/main-slider__img.png" alt="Профессиональная техника в аренду">
               <p class="main-slider__text">Профессиональная техника в аренду от </p>
-              15000
-              руб./сутки
+              <p class="main-slider__text main-slider__text--white">15000</p>
+              <p class="main-slider__text main-slider__text--big">руб./сутки</p>
             </li>
           </ul>
           <div class="main-slider__arrows-area">
-            <div class="main-slider__arrow main-slider__arrow-left">
+            <button class="main-slider__arrow main-slider__arrow--left">
               <span class="visually-hidden">Переключить влево</span>
-            </div>
-            <div class="main-slider__arrow main-slider__arrow-left">
+            </button>
+            <button class="main-slider__arrow main-slider__arrow--right">
               <span class="visually-hidden">Переключить вправо</span>
-            </div>
+            </button>
           </div>
         </div>
       </section>
